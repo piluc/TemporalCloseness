@@ -19,8 +19,7 @@ public class Main {
 			boolean isUndirected) {
 		double closenessEstimate[] = new double[n];
 		for (int k = 0; k < sampleSize; k++) {
-//			int d = (int) (Math.random() * n);
-			int d = k;
+			int d = (int) (Math.random() * n);
 			BackwardBFS bbfs = new BackwardBFS(n, talpha, tomega, fileDecreasing, d);
 			double[] est = bbfs.run(!isUndirected);
 			for (int source = 0; source < n; source++) {
